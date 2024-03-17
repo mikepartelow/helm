@@ -1,6 +1,6 @@
 # khelm
 
-Demo of a containerized helm wrapper for managing a local [kind](https://kind.sigs.k8s.io) cluster.
+Demo of a containerized [helm](https://helm.sh) wrapper for managing a local [kind](https://kind.sigs.k8s.io) cluster.
 
 ## Setup
 
