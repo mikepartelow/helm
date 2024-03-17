@@ -14,6 +14,7 @@ Demo of a containerized [helm](https://helm.sh) wrapper for managing a local [ki
 ```bash
 % make list
 NAME	NAMESPACE	REVISION	UPDATED	STATUS	CHART	APP VERSION
+
 % make install
 NAME: nginx
 LAST DEPLOYED: Sun Mar 17 17:19:37 2024
@@ -26,9 +27,11 @@ CHART NAME: nginx
 CHART VERSION: 15.14.0
 APP VERSION: 1.25.4
 ...
+
 % make list
 NAME 	NAMESPACE	REVISION	UPDATED                                	STATUS  	CHART        	APP VERSION
 nginx	helm     	1       	2024-03-17 17:17:06.242034589 +0000 UTC	deployed	nginx-15.14.0	1.25.4
+
 % make uninstall
 release "nginx" uninstalled
 ```
