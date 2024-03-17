@@ -32,3 +32,9 @@ nginx	helm     	1       	2024-03-17 17:17:06.242034589 +0000 UTC	deployed	nginx-
 % make uninstall
 release "nginx" uninstalled
 ```
+
+## The What of it
+
+The `Makefile` fetches kube config from `kind` and replaces `127.0.0.1` with `host.docker.internal` so the `kind` cluster is reachable from within the running container.  
+
+The cluster certificate is issued for `localhost`, not for `host.docker.internal`, so in the `Makefile` we pass `--kube-insecure-skip-tls-verify` to `helm`. This is not ideal and can probably be resolved more securely, without bypassing TLS.
